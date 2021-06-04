@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- REACT CDN -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+
+    <!-- REACT DOM-->
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- BABEL LIBRARY -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!--BOOTSTRAP CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
+
+    <!-- FONT AWESOME CDN -->
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+ 
+</head>
+<body>
+
+    <!-- REACT CONTENT LOCATION -->
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+function Navbar() {
+    return ( 
+      <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+          <a class="navbar-brand text-primary" href=""><h3>Insta</h3></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link text-primary mr-3" href="">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link text-primary mr-2" href="">Watch</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link text-primary mr-2" href="">Friends</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link text-primary mr-2" href=""><i class="fas fa-caret-circle-down"></i></a>
+                  </li>
+
+              </ul>
+          </div>
+      </nav>
+  </div>
+    )
+}
+function Profile() {
+  return(
+    <div class="container">
+      <div class="con">
+      <p>.</p>
+      </div>
+      <h3 class="name">Jan Erwin</h3>
+      <p class="prof">View Profile</p>
+  <tr>
+    <th>336</th>
+    <th>3021</th>
+    <th>19</th>    
+  </tr>
+  <tr>
+    <td>Post</td>
+    <td> Following</td>    
+    <td>Followers</td>
+  </tr>
+    </div>
+  )
+}
+function NewsFeed(){
+  return(
+    <div class="container1">
+      <h4 class="news-title">News Feed <i class="far fa-sliders-h-square"></i></h4>
+      <div class="con1">
+        <p class="sear">Search</p>
+        </div>
+    </div>
+  )
+}
+function Post(props){
+  return(
+    <div class="container2">
+        <div class="con2">
+      <p>.</p>
+      </div><h5 class="post-name">{props.name}</h5>
+      <h6 class="post-date">{props.date} <i class="fal fa-globe-asia"></i></h6><br/>
+      <img class="post-img" src={props.post} />
+      <h6><span class="like">Like </span>
+      <span class="comm"> Comment</span>
+      <span class="share"> Share</span></h6>
+    </div>
+  )
+}
+
+
+function Card(props){
+  return(
+    <div>
+<h2>{props.title}</h2>
+<img className="card_img" src={props.image}/> <br/>
+<em>{props.author}</em>
+    </div>
+  )
+}
+
+// VARIABLE FOR JSX REACT
+var destination = document.getElementById('app');
+
+ReactDOM.render(
+// WHAt
+<div class="container-fluid">
+  <Navbar/>
+  <Profile/>
+  <NewsFeed/>
+  <Post
+  name="Bella   Poarch"
+  date="13m."
+  post="https://img.pngio.com/polaroid-vector-png-clipart-clip-art-iphone-transparent-heart-polaroid-vector-png-920_940.png"
+  />
+
+<Post
+  name="Lebron    James"
+  date="10m."
+  post="https://www.clipartmax.com/png/small/225-2253438_video-comments-video-icon-vector-png.png"
+  />
+
+<Post
+  name="Anthony	Davis"
+  date="3d."
+  post="https://img.pngio.com/polaroid-vector-png-clipart-clip-art-iphone-transparent-heart-polaroid-vector-png-920_940.png"
+  />
+
+<Post
+  name="Nics   Orense"
+  date="1h."
+  post="https://www.clipartmax.com/png/small/225-2253438_video-comments-video-icon-vector-png.png"
+  />
+
+<Post
+  name="James Helterbran"
+  date="19h."
+  post="https://img.pngio.com/polaroid-vector-png-clipart-clip-art-iphone-transparent-heart-polaroid-vector-png-920_940.png"
+  />
+ 
+ <Post
+  name="Bruce	Lee"
+  date="18h."
+  post="https://www.clipartmax.com/png/small/225-2253438_video-comments-video-icon-vector-png.png"
+  />
+
+<Post
+  name="Jed	Agustin"
+  date="17h."
+  post="https://img.pngio.com/polaroid-vector-png-clipart-clip-art-iphone-transparent-heart-polaroid-vector-png-920_940.png"
+  />
+
+<Post
+  name="Jen Patamo"
+  date="12h."
+  post="https://www.clipartmax.com/png/small/225-2253438_video-comments-video-icon-vector-png.png"
+  />
+
+<Post
+  name="Joyce Arcillas"
+  date="1h."
+  post="https://img.pngio.com/polaroid-vector-png-clipart-clip-art-iphone-transparent-heart-polaroid-vector-png-920_940.png"
+  />
+
+<Post
+  name="Jayzam   Manabat"
+  date="12h."
+  post="https://www.clipartmax.com/png/small/225-2253438_video-comments-video-icon-vector-png.png"
+  />
+
+<Post
+  name="Kaiser De Leva"
+  date="13h."
+  post="https://img.pngio.com/polaroid-vector-png-clipart-clip-art-iphone-transparent-heart-polaroid-vector-png-920_940.png"
+  />
+
+<Post
+  name="John Cena"
+  date="2h."
+  post="https://www.clipartmax.com/png/small/225-2253438_video-comments-video-icon-vector-png.png"
+  />
+
+<Post
+  name="Mcgrady"
+  date="1h."
+  post="https://img.pngio.com/polaroid-vector-png-clipart-clip-art-iphone-transparent-heart-polaroid-vector-png-920_940.png"
+  />
+
+<Post
+  name="Nick Young"
+  date="3m."
+  post="https://www.clipartmax.com/png/small/225-2253438_video-comments-video-icon-vector-png.png"
+  />
+
+<Post
+  name="Julios Babao"
+  date="23h."
+  post="https://img.pngio.com/polaroid-vector-png-clipart-clip-art-iphone-transparent-heart-polaroid-vector-png-920_940.png"
+  />
+
+  
+</div>,
+// WHERE
+// THIS IS CODE FOR DESTINATION VARIABLE
+  destination
+);
+    </script>
+
+</body>
+</html>
